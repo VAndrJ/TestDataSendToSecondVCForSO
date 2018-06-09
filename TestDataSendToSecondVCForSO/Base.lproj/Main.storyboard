@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TIn-Nh-Ze5">
+                                <rect key="frame" x="16" y="60" width="343" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                    <segment title="Fourth"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSegmetChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yee-Ry-IBU"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMN-uX-20u">
+                                <rect key="frame" x="16" y="141" width="343" height="30"/>
+                                <state key="normal" title="Go to next controller"/>
+                                <connections>
+                                    <action selector="goToNextControllerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fmp-Z0-ZBZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTS-dp-GCN">
+                                <rect key="frame" x="16" y="104" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tTS-dp-GCN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0b5-IO-VhM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TIn-Nh-Ze5" secondAttribute="trailing" constant="16" id="8Xb-IL-8Pg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pMN-uX-20u" secondAttribute="trailing" constant="16" id="8gD-wY-g91"/>
+                            <constraint firstItem="TIn-Nh-Ze5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Eo9-T1-qq7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tTS-dp-GCN" secondAttribute="trailing" constant="16" id="WPj-rN-xqy"/>
+                            <constraint firstItem="tTS-dp-GCN" firstAttribute="top" secondItem="TIn-Nh-Ze5" secondAttribute="bottom" constant="16" id="g0O-Fz-3fF"/>
+                            <constraint firstItem="pMN-uX-20u" firstAttribute="top" secondItem="tTS-dp-GCN" secondAttribute="bottom" constant="16" id="juc-ID-mqK"/>
+                            <constraint firstItem="TIn-Nh-Ze5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="xQU-61-acZ"/>
+                            <constraint firstItem="pMN-uX-20u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yJe-I0-c6D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="tTS-dp-GCN" id="SqD-i9-3Dc"/>
+                        <outlet property="segmentedControl" destination="TIn-Nh-Ze5" id="dhl-Nr-itc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="vnS-Pt-Or7">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="6dK-oq-s3I" customClass="SecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZSC-Sq-kmq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgt-XM-1cH">
+                                <rect key="frame" x="16" y="40" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOW-xT-wzf">
+                                <rect key="frame" x="16" y="77" width="343" height="30"/>
+                                <state key="normal" title="Check value"/>
+                                <connections>
+                                    <action selector="checkValueAction:" destination="6dK-oq-s3I" eventType="touchUpInside" id="0EB-4R-anv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPa-eB-sC8">
+                                <rect key="frame" x="16" y="123" width="343" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeAction:" destination="6dK-oq-s3I" eventType="touchUpInside" id="USf-v2-hUx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Lgt-XM-1cH" firstAttribute="leading" secondItem="LHX-AK-rEo" secondAttribute="leading" constant="16" id="2Oi-dr-7h3"/>
+                            <constraint firstItem="Lgt-XM-1cH" firstAttribute="top" secondItem="LHX-AK-rEo" secondAttribute="top" constant="20" id="6yH-MV-rMX"/>
+                            <constraint firstItem="hPa-eB-sC8" firstAttribute="top" secondItem="fOW-xT-wzf" secondAttribute="bottom" constant="16" id="8g3-Ia-pkz"/>
+                            <constraint firstItem="fOW-xT-wzf" firstAttribute="top" secondItem="Lgt-XM-1cH" secondAttribute="bottom" constant="16" id="9Ry-GD-JL0"/>
+                            <constraint firstItem="LHX-AK-rEo" firstAttribute="trailing" secondItem="fOW-xT-wzf" secondAttribute="trailing" constant="16" id="GIf-MD-RvC"/>
+                            <constraint firstItem="hPa-eB-sC8" firstAttribute="leading" secondItem="LHX-AK-rEo" secondAttribute="leading" constant="16" id="Hdo-lO-zaY"/>
+                            <constraint firstItem="LHX-AK-rEo" firstAttribute="trailing" secondItem="hPa-eB-sC8" secondAttribute="trailing" constant="16" id="e3l-KY-R33"/>
+                            <constraint firstItem="LHX-AK-rEo" firstAttribute="trailing" secondItem="Lgt-XM-1cH" secondAttribute="trailing" constant="16" id="loL-AQ-3K3"/>
+                            <constraint firstItem="fOW-xT-wzf" firstAttribute="leading" secondItem="LHX-AK-rEo" secondAttribute="leading" constant="16" id="qLo-Rg-xTX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LHX-AK-rEo"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="Lgt-XM-1cH" id="vyv-xC-0Mq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8a-OH-E8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="34"/>
+        </scene>
+    </scenes>
+</document>
